@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio | Desarrollo Backend</title>
+
+  <!-- Fuentes de Google: Cormorant (Serif Vintage), Inter (Sans-serif limpia), JetBrains Mono (Código) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Script para la interactividad (Terminal y Parallax) -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<!-- PLUS DE NIVEL SENIOR: Luz ambiental que sigue el cursor -->
+<div id="cursor-glow"></div>
+<!-- CABECERA / HERO -->
+<header class="hero-section">
+  <div class="hero-labels">
+    <p class="mono-text">ESTADO: DISPONIBLE</p>
+    <p class="mono-text">UBICACIÓN: ESTADO DE MÉXICO, ATIZAPÁN DE ZARAGOZA</p>
+  </div>
+
+  <div class="hero-content">
+    <div class="profile-image-container">
+      <!-- Se agregó el ID parallax-img para el script -->
+      <img src="img/perfil.jpeg" alt="Foto de perfil de Oscar Rico" class="profile-img" id="parallax-img">
+    </div>
+
+    <!-- Se agregó la clase fade-in para la animación de entrada -->
+    <div class="hero-intro fade-in">
+      <h2 class="right-name">Oscar Rico</h2>
+      <p class="role-title">INGENIERO EN COMPUTACIÓN & DESARROLLADOR BACKEND</p>
+
+      <p class="short-bio">Recién egresado de Ingeniería en Computación enfocado en el desarrollo backend utilizando Java y Spring Boot.</p>
+    </div>
+  </div>
+
+  <!-- BARRA DE NAVEGACIÓN (SPA Style) -->
+  <nav class="hero-nav">
+    <a href="#sobre-mi" class="nav-btn" data-target="sobre-mi">Sobre mí</a>
+    <a href="#habilidades" class="nav-btn" data-target="habilidades">Mi Stack Técnico</a>
+    <a href="#proyectos" class="nav-btn" data-target="proyectos">Mis proyectos</a>
+    <a href="#certificaciones" class="nav-btn" data-target="certificaciones">Certificaciones</a>
+    <a href="CV_OARS_JUL26.pdf" download="CV_Oscar_Rico_Backend.pdf" class="nav-btn">Descarga mi CV</a>
+  </nav>
+</header>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="section-container toggleable-section">
+  <h3 class="section-label">SOBRE MÍ</h3>
+  <div class="about-content">
+    <p class="lead-text">Hola, soy Oscar Alan Rico Sampedro. Tengo 23 años, soy recién egresado de la carrera de Ingeniería en Computación por la UAEM, plantel Valle de México.</p>
+
+    <p>En lo personal, disfruto mucho hacer ejercicio y me considero una persona ordenada, detallista, puntual y honesta en lo que hago. Durante los últimos 4 años y 10 meses he trabajado en Bodega Aurrera (pasando por cajas, servicios y autocobro). Esta experiencia me ha dado habilidades invaluables: aprendí a resolver problemas al momento, a tener una comunicación efectiva con mi equipo y a trabajar bajo presión con mucha calma.</p>
+
+    <p>Mi verdadera pasión es descubrir cómo funcionan las cosas por detrás, por lo que me he estado preparando intensamente este año para ser un mejor desarrollador backend. En Platzi completé la ruta de 'Programación Orientada a Objetos con Java', donde cursé el 'Curso Avanzado de Java SE' y 'Programación funcional con Java SE'. Actualmente estoy a solo dos cursos de concluir la ruta completa de 'Desarrollo backend con Java' (llevo 5 de 7).</p>
+
+    <p>Recientemente, durante mis prácticas profesionales, tomé un rol de desarrollador Fullstack. Participé en un proyecto que comenzó como un gestor de archivos y evolucionó a un sistema completo para facilitar la creación de cotizaciones. Ahí trabajé en el backend utilizando Node.js, Express, Passport, Drizzle ORM, PostgreSQL (Neon) y Puppeteer; mientras que del lado del frontend implementé React, TypeScript, Vite, Tailwind y Radix/shadcn, manejando desde sesiones y subida de archivos hasta formularios y gráficos interactivos.</p>
+
+    <p>Cuento con motocicleta propia, por lo que tengo total facilidad para trasladarme a cualquier zona del Edomex o la CDMX sin que el tiempo de traslado sea un problema. Estoy muy motivado por seguir aprendiendo y aportar todo este valor en un nuevo equipo de desarrollo.</p>
+  </div>
+</section>
+
+<!-- HABILIDADES: LA TERMINAL INTERACTIVA -->
+<section id="habilidades" class="section-container toggleable-section">
+  <h3 class="section-label">[STACK TÉCNICO & ENTORNOS]</h3>
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <p class="terminal-title">bash - root@oscar-rico:~</p>
+    </div>
+    <div class="terminal-body" id="typewriter-container">
+      <!-- El texto se generará automáticamente con JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS DESTACADOS: TARJETAS REVELABLES -->
+<section id="proyectos" class="section-container toggleable-section">
+  <h3 class="section-label">[PROYECTOS DESTACADOS]</h3>
+  <div class="projects-grid">
+
+    <!-- Proyecto 01: Prácticas Profesionales -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">01</div>
+        <h4>CORELINK SYSTEMS</h4>
+        <p class="project-role">DESARROLLADOR FULLSTACK</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">Sistema con autenticación Azure AD para administrar archivos (Microsoft Graph), proveedores y cálculos automáticos. Integra un motor de renderizado HTML a PDF (Puppeteer) para propuestas corporativas y trazabilidad de auditorías.</p>
+        <div class="card-tech">
+          <span>Node.js</span><span>React + Vite</span><span>TypeScript</span><span>PostgreSQL</span><span>Drizzle ORM</span><span>Azure AD</span>
+        </div>
+        <a href="https://github.com/Angel-Soto43/AzalMechanicalSupport" target="_blank" class="repo-btn">Repositorio</a>
+      </div>
+    </article>
+
+    <!-- Proyecto 02: Servicio Social UAEM -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">02</div>
+        <h4>Sistema de Captura y Contratación Docente</h4>
+        <p class="project-role">DESARROLLADOR JAVA (SERVICIO SOCIAL)</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">Desarrollo de software para agilizar la captura de formatos institucionales de contratación de profesores para la UAEM Valle de México. Arquitectura estructurada bajo el patrón de diseño MVC e integración de base de datos relacional.</p>
+        <div class="card-tech">
+          <span>Java</span><span>Patrón MVC</span><span>MySQL</span><span>NetBeans</span>
+        </div>
+
+        <!-- Indicador visual de proyecto sin repositorio público -->
+        <span class="repo-btn internal-badge">Proyecto Interno</span>
+      </div>
+    </article>
+
+    <!-- Proyecto 03: API Supermercado -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">03</div>
+        <h4>Market API - Gestión de Retail</h4>
+        <p class="project-role">DESARROLLO BACKEND & ARQUITECTURA</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">API REST monolítica para la gestión de productos y transacciones de supermercado. Destaca por una estricta arquitectura en capas que desacopla el modelo de dominio de la persistencia de datos mediante MapStruct, utilizando Spring Data JPA y PostgreSQL para un manejo robusto de las operaciones.</p>
+        <div class="card-tech">
+          <span>Spring Boot 4</span><span>Java 21</span><span>PostgreSQL</span><span>MapStruct</span><span>Swagger</span>
+        </div>
+
+        <a href="URL_DE_TU_REPOSITORIO_SUPERMERCADO" target="_blank" class="repo-btn">Repositorio</a>
+      </div>
+    </article>
+
+    <!-- Proyecto 04: DemoPlay AI Backend -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">04</div>
+        <h4>API de Películas & Recomendaciones IA</h4>
+        <p class="project-role">DESARROLLADOR BACKEND & IA</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">Backend RESTful construido con Spring Boot siguiendo una arquitectura en capas. Integra PostgreSQL con Spring Data JPA, mapeo de DTOs con MapStruct, documentación con Swagger (OpenAPI), e incorpora Inteligencia Artificial mediante LangChain4j y OpenAI para un sistema de recomendaciones dinámicas.</p>
+        <div class="card-tech">
+          <span>Spring Boot</span><span>Java 21</span><span>LangChain4j</span><span>PostgreSQL</span><span>MapStruct</span><span>Swagger</span>
+        </div>
+
+        <a href="https://github.com/Alan-Rico/DemoPlay_SpringBoot" target="_blank" class="repo-btn">Repositorio</a>
+      </div>
+    </article>
+
+    <!-- Proyecto 05: CRUD Empleados JDBC -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">05</div>
+        <h4>Sistema de Gestión de Empleados</h4>
+        <p class="project-role">DESARROLLO JAVA & PATRONES DE DISEÑO</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">Desarrollo de un sistema CRUD enfocado en arquitectura en capas. Implementación del patrón Repository para desacoplar la lógica de negocio y gestión de persistencia directa con JDBC, optimizando el rendimiento mediante un Pool de Conexiones (Apache Commons DBCP2).</p>
+        <div class="card-tech">
+          <span>Java 21</span><span>JDBC</span><span>MySQL</span><span>Patrón Repository</span><span>DBCP2</span>
+        </div>
+
+        <a href="https://github.com/Alan-Rico/CRUD" target="_blank" class="repo-btn">Repositorio</a>
+      </div>
+    </article>
+
+    <!-- Proyecto 06: Amazon Viewer -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">06</div>
+        <h4>Amazon Viewer - Catálogo Multimedia</h4>
+        <p class="project-role">DESARROLLO JAVA & ACCESO A DATOS</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">Aplicación de consola interactiva para gestionar contenido de streaming. Diseñada para demostrar dominio avanzado en Programación Orientada a Objetos y la implementación del patrón DAO para separar la lógica de negocio del acceso a datos mediante JDBC y MySQL.</p>
+        <div class="card-tech">
+          <span>Java SE</span><span>MySQL</span><span>JDBC</span><span>Patrón DAO</span><span>POO</span>
+        </div>
+
+        <a href="https://github.com/Alan-Rico/Java_SE" target="_blank" class="repo-btn">Repositorio</a>
+      </div>
+    </article>
+
+    <!-- Proyecto 07: JPA/Hibernate Employee Manager -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">07</div>
+        <h4>Gestor de Empleados con JPA & Hibernate</h4>
+        <p class="project-role">DESARROLLO JAVA & ORM</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">Aplicación backend centrada en la persistencia de datos utilizando el estándar JPA. Demuestra el mapeo objeto-relacional (ORM) con anotaciones, la gestión del ciclo de vida de entidades mediante EntityManager y la configuración de conexiones MySQL vía persistence.xml, eliminando la necesidad de SQL manual.</p>
+        <div class="card-tech">
+          <span>Java 21</span><span>JPA</span><span>Hibernate</span><span>MySQL</span><span>Maven</span>
+        </div>
+
+        <a href="https://github.com/Alan-Rico/JPA_proyect" target="_blank" class="repo-btn">Repositorio</a>
+      </div>
+    </article>
+
+    <!-- Proyecto 08: Platzi Play -->
+    <article class="project-card interactive-card">
+      <div class="card-visible">
+        <div class="project-number">08</div>
+        <h4>Platzi Play - Simulador de Streaming</h4>
+        <p class="project-role">DESARROLLO JAVA & POO AVANZADA</p>
+      </div>
+      <div class="card-hidden">
+        <p class="project-desc">Aplicación de consola interactiva con arquitectura limpia y diseño modular. Implementa Programación Orientada a Objetos (herencia, polimorfismo, interfaces), persistencia de datos nativa (File I/O), excepciones personalizadas y manipulación de datos con Java Streams.</p>
+        <div class="card-tech">
+          <span>Java SE</span><span>POO</span><span>Java Streams</span><span>File I/O</span><span>Arquitectura Limpia</span>
+        </div>
+
+        <!-- Aquí sí colocamos el botón real de repositorio -->
+        <a href="https://github.com/Alan-Rico/Curso_Java" target="_blank" class="repo-btn">Repositorio</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CERTIFICACIONES Y CURSOS -->
+<section id="certificaciones" class="section-container toggleable-section">
+  <h3 class="section-label">[CERTIFICACIONES Y RUTAS]</h3>
+
+  <div class="cert-grid">
+
+    <!-- Certificado 01 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/12323-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Prompt Engineering</h4>
+        <p>Platzi | 7 de agosto, 2026</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+    <!-- Certificado 02 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/1996-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Java Spring</h4>
+        <p>Platzi | 4 de agosto, 2026</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+    <!-- Certificado 03 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/12217-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Java Spring Boot</h4>
+        <p>Platzi | 12 de mayo, 2026</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+    <!-- Certificado 04 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/8048-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Java SE: SQL y Bases de Datos</h4>
+        <p>Platzi | 27 de marzo, 2026</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+    <!-- Certificado 05 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/4656-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Introducción al Desarrollo Backend</h4>
+        <p>Platzi | 3 de marzo, 2026</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+    <!-- Certificado 06 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/1826-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Programación Funcional con Java SE</h4>
+        <p>Platzi | 20 de febrero, 2026</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+    <!-- Certificado 07 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/1236-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Java SE Básico Avanzado</h4>
+        <p>Platzi | 5 de febrero, 2026</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+    <!-- Certificado 08 -->
+    <a href="https://platzi.com/p/oscaralan1806/curso/12199-course/diploma/detalle/" target="_blank" class="cert-card">
+      <div class="cert-info">
+        <h4>Curso de Java</h4>
+        <p>Platzi | 28 de diciembre, 2025</p>
+      </div>
+      <span class="repo-btn">Ver Credencial</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section-container contact-centered">
+  <h3 class="section-label center-title">[ >_ INICIALIZAR_CONTACTO ]</h3>
+
+  <p class="console-text">
+    SISTEMA LISTO. Esperando parámetros de entrada para nuevas oportunidades de desarrollo y colaboración.
+  </p>
+
+  <div class="cmd-buttons-grid">
+    <a href="mailto:oalanricos@outlook.com" class="cmd-prompt-btn">
+      <span class="symbol">></span> Ejecutar_Correo <span class="cursor">_</span>
+    </a>
+    <a href="https://www.linkedin.com/in/oscar-alan-rico-sampedro-454037216" target="_blank" class="cmd-prompt-btn">
+      <span class="symbol">></span> Conectar_LinkedIn <span class="cursor">_</span>
+    </a>
+    <a href="https://github.com/Alan-Rico" target="_blank" class="cmd-prompt-btn">
+      <span class="symbol">></span> Clonar_GitHub <span class="cursor">_</span>
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
