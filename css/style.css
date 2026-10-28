@@ -603,3 +603,30 @@ a.cert-card:hover .repo-btn {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(109, 179, 63, 0.4);
 }
+
+/* =========================================
+   TARJETAS REVELABLES Y EFECTO HOVER
+   ========================================= */
+.interactive-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Estado oculto por defecto */
+.interactive-card .card-hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+  margin-top: 0;
+}
+
+/* Estado al pasar el cursor por encima */
+.interactive-card:hover .card-hidden {
+  max-height: 800px;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
